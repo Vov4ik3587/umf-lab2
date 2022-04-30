@@ -34,4 +34,9 @@ public class Area
     //     DischargeCoefficient = dischargeCoefficient;
     //     AmountNodes = amountNodes;
     // }
+
+    public static int MakeGrid(Area? area)
+    {
+        return 0;
+    }
 }
