@@ -1,3 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace umf_lab2;
 
-Console.WriteLine("Hello, World!");
+public static class Program
+{
+    public static void Main()
+    {
+        
+    }
+}
