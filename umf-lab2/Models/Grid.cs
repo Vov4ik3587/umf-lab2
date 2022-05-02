@@ -22,12 +22,16 @@ public class Grid
         XValueNode.Add(xCurrentDot);
         xCurrentDot = xCurrentDot + initStep;
         
-        for (int i = 1; i <= AmountOfElements ; i++)
+        
+        for (int i = 1; i < AmountOfElements ; i++)
         {
+            var step = initStep * area.DischargeCoefficient;
             LocalNumberNode.Add(i+1);
             XValueNode.Add(xCurrentDot);
-            xCurrentDot += xCurrentDot * area.DischargeCoefficient;
+            xCurrentDot += step;
         }
+        XValueNode.Add(area.RightBorder);
+        LocalNumberNode.Add(area.AmountNodes);
     }
 
     public void PrintGrid()

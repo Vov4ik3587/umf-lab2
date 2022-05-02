@@ -17,7 +17,7 @@ public static class Program
         //         File.ReadAllText("input-data/boundaryConditions.json"));
         // var accuracy = 
         //     JsonSerializer.Deserialize<Models.Accuracy>(File.ReadAllText("input-data/accuracy.json"));
-        var area = new Area(0, 1, 1, 3);
+        var area = new Area(0.0, 1.0, 1, 15);
         var grid = new Grid(area);
         grid.PrintGrid();
     }
