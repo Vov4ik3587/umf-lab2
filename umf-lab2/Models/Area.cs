@@ -27,16 +27,11 @@ public class Area
     /// </summary>
     public int AmountNodes { get; init; }
 
-    // public Area(double a, double b, double dischargeCoefficient, int amountNodes)
-    // {
-    //     LeftBorder = a;
-    //     RightBorder = b;
-    //     DischargeCoefficient = dischargeCoefficient;
-    //     AmountNodes = amountNodes;
-    // }
-
-    public static int MakeGrid(Area? area)
+    public Area(double leftBorder, double rightBorder, double dischargeCoefficient, int amountNodes)
     {
-        return 0;
+        LeftBorder = leftBorder;
+        RightBorder = rightBorder;
+        DischargeCoefficient = dischargeCoefficient;
+        AmountNodes = amountNodes;
     }
 }
