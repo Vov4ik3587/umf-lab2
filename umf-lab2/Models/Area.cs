@@ -27,11 +27,11 @@ public class Area
     /// </summary>
     public int AmountNodes { get; init; }
 
-    public Area(double leftBorder, double rightBorder, double dischargeCoefficient, int amountNodes)
+    /*public Area(double leftBorder, double rightBorder, double dischargeCoefficient, int amountNodes)
     {
         LeftBorder = leftBorder;
         RightBorder = rightBorder;
         DischargeCoefficient = dischargeCoefficient;
         AmountNodes = amountNodes;
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 ﻿{
-  "leftBorder": 0,
-  "rightBorder": 1,
-  "amountNodes": 3,
-  "dischargeCoefficient": 1
+  "LeftBorder": 0,
+  "RightBorder": 1,
+  "AmountNodes": 15,
+  "DischargeCoefficient": 1.25
 }
