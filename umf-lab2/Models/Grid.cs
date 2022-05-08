@@ -8,7 +8,11 @@ public class Grid
     public double[] LocalNumberNode;
     public double[] XValueNode;
     public readonly int AmountOfElements;
-
+    
+    /// <summary>
+    /// Преобразует расчетную область в сетку
+    /// </summary>
+    /// <param name="area">Экземпляр расчетной области</param>
     public Grid(Area area)
     {
         AmountOfElements = area.AmountNodes - 1;
@@ -24,6 +28,7 @@ public class Grid
 
         if (Math.Abs(area.DischargeCoefficient - 1) > 1e-10)
         {
+            // Вычислениие на неравномерной сетке
             // При неединичном коэф разрядки используем геом прогрессию
             var sumGeomProgress =
                 (1 - Math.Pow(area.DischargeCoefficient, AmountOfElements)) / (1 - area.DischargeCoefficient);
@@ -39,7 +44,8 @@ public class Grid
         }
         else
         {
-            var stepWithoutDischarge = lengthOfArea / AmountOfElements; // шаг без коэф разрядки
+            // Вычисление на равномерной сетке
+            var stepWithoutDischarge = lengthOfArea / AmountOfElements;
 
             for (int i = 1; i < AmountOfElements; i++)
             {

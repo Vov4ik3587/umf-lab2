@@ -18,7 +18,7 @@
       <None Update="input-data\boundaryConditions.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="input-data\func.json">
+      <None Update="input-data\diffEquation.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
