@@ -2,28 +2,33 @@
 
 /// <summary>
 /// Параметры диф уравнения, которое нам дано. Уравнение одномерное
+/// TODO: на каждом КЭ свои значения констант, поэтому нужно придумать чета через массив
 /// </summary>
 public class DiffEquation
 {
     /// <summary>
-    /// Параметр лямбда. TODO: Сделать ее зависящей от функции решения 
+    /// Лямбда. Пока что коэффициент. TODO: сделать функцией от х
     /// </summary>
-    public string Lambda { get; init; } = string.Empty;
+    private double Lambda { get; init; } 
+    /// <summary>
+    ///  Гамма. Всегда будет константой 
+    /// </summary>
+    private double Gamma { get; init; }
     
     /// <summary>
-    /// Параметр Гамма. В моем варианте является константой
+    /// Функция правой части. Нужна для тестирования работы программы
     /// </summary>
-    public string Gamma { get; init; } = string.Empty;
-
+    public readonly Func<double, double> RightPart = x => 2 * x - 3;
+    
     /// <summary>
-    /// Функция правой части. Является нелинейной компонентой, будет аппроксимирована
+    /// Истинная функция U. Нужна для тестирования работы программы
     /// </summary>
-    public string FuncOfRightPart { get; init; } = string.Empty;
-
-    /// <summary>
-    /// Функция истинного решения, к которому мы стремимся
-    /// </summary>
-    public string UStar { get; init; } = string.Empty;
-
-
+    public readonly Func<double, double> UStar = x => x;
+    
+    public DiffEquation(double lambda, double gamma)
+    {
+        Lambda = lambda;
+        Gamma = gamma;
+    }
+    
 }
