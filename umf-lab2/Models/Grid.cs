@@ -5,7 +5,7 @@
 /// </summary>
 public class Grid
 {
-    public double[] LocalNumberNode;
+    public int[] LocalNumberNode;
     public double[] XValueNode;
     public readonly int AmountOfElements;
     
@@ -17,7 +17,7 @@ public class Grid
     {
         AmountOfElements = area.AmountNodes - 1;
 
-        LocalNumberNode = new double[area.AmountNodes];
+        LocalNumberNode = new int[area.AmountNodes];
         XValueNode = new double[area.AmountNodes];
         
         var lengthOfArea = area.RightBorder - area.LeftBorder;

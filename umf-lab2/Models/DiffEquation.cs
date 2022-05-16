@@ -30,5 +30,13 @@ public class DiffEquation
         Lambda = lambda;
         Gamma = gamma;
     }
-    
+
+    public void Print()
+    {
+        Console.WriteLine("Options of Diff Equation:");
+        Console.WriteLine($"Lambda is: {this.Lambda}");
+        Console.WriteLine($"Gamma is: {this.Gamma}");
+        Console.WriteLine($"Func of right part is: {this.RightPart}");
+        Console.WriteLine($"Func u* is: {this.UStar}");
+    }
 }
